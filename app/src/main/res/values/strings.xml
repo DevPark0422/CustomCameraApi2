@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">CustomCameraApi2</string>
+    <string name="camera_permission_message">사진 촬영을 위해서는 \'사진 및 동영상\' 촬영에 대한 권한이 필요합니다.</string>
+
+
+    <string name="picture">Picture</string>
+    <string name="description_info">Info</string>
+    <string name="request_permission">This sample needs camera permission.</string>
+    <string name="camera_error">This device doesn\'t support Camera2 API.</string>
+    <string name="intro_message">
+        <![CDATA[
+
+
+            This sample demonstrates the basic use of Camera2 API. Check the source code to see how
+            you can display camera preview and take pictures.
+
+
+        ]]>
+    </string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>
