@@ -285,6 +285,11 @@ class Camera2BasicFragment : Fragment(), View.OnClickListener, ActivityCompat.On
                     setOnImageAvailableListener(onImageAvailableListener, backgroundHandler)
                 }
 
+                //사진 촬영 이미지 크기 (1:1 이미지 사이즈)
+                /*imageReader = ImageReader.newInstance(1088, 1088, ImageFormat.JPEG, 2).apply {
+                    setOnImageAvailableListener(onImageAvailableListener, backgroundHandler)
+                }*/
+
                 val displayRotation = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
                     requireActivity().display?.rotation
                 } else {
@@ -309,6 +314,11 @@ class Camera2BasicFragment : Fragment(), View.OnClickListener, ActivityCompat.On
                 if (maxPreviewHeight > MAX_PREVIEW_HEIGHT) maxPreviewHeight = MAX_PREVIEW_HEIGHT
 
                 previewSize = chooseOptimalSize(map.getOutputSizes(SurfaceTexture::class.java), rotatedPreviewWidth, rotatedPreviewHeight, maxPreviewWidth, maxPreviewHeight, largest!!)
+
+                //카메라 프리뷰 화면 사이즈
+                //1:1 촬영 가능한 디바이스인지 체크 후 가장 큰 1:1 사이즈 크기를 넣어 준다.
+                //previewSize = Size(1088, 1088)
+
 
             }//end of for
 
